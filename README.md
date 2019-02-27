@@ -8,10 +8,10 @@
 
 - Part1
 
-一、tsfresh.feature_extraction.feature_calculators.abs_energy(x)
-二、tsfresh.feature_extraction.feature_calculators.absolute_sum_of_changes(x)
-三、tsfresh.feature_extraction.feature_calculators.agg_autocorrelation(x, param)
-四、tsfresh.feature_extraction.feature_calculators.agg_linear_trend(x, param)
+- 一、tsfresh.feature_extraction.feature_calculators.abs_energy(x)
+- 二、tsfresh.feature_extraction.feature_calculators.absolute_sum_of_changes(x)
+- 三、tsfresh.feature_extraction.feature_calculators.agg_autocorrelation(x, param)
+- 四、tsfresh.feature_extraction.feature_calculators.agg_linear_trend(x, param)
 五、tsfresh.feature_extraction.feature_calculators.approximate_entropy(x, m, r)
 六、tsfresh.feature_extraction.feature_calculators.ar_coefficient(x, param)
 七、tsfresh.feature_extraction.feature_calculators.augmented_dickey_fuller(x, param)
