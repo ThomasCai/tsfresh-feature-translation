@@ -24,7 +24,8 @@ ae = tsf.feature_extraction.feature_calculators.abs_energy(ts)
 * 译：一阶差分绝对和
 * 返回时序数据的一阶差分结果的绝对值之和
 
-$$\sum_{i=1}^{n-1} |x_{i+1}-x_i|$$
+![](http://latex.codecogs.com/gif.latex?\sum_{i=1}^{n-1} |x_{i+1}-x_i|
+
 * 参数：$x$   (pandas.Series)计算时序特征的数据对象
 * 返回值：一阶差分绝对和（非负浮点数）
 * 函数类型：简单
