@@ -24,7 +24,7 @@ ae = tsf.feature_extraction.feature_calculators.abs_energy(ts)
 * 译：一阶差分绝对和
 * 返回时序数据的一阶差分结果的绝对值之和
 
-$$\sum_{i=1}^{n-1} |x_{i+1}-x_i|$$
+![](http://latex.codecogs.com/gif.latex?\sum_{i=1}^{n-1}|x_{i+1}-x_i|)
 * 参数：$x$   (pandas.Series)计算时序特征的数据对象
 * 返回值：一阶差分绝对和（非负浮点数）
 * 函数类型：简单
@@ -45,7 +45,7 @@ ae = tsf.feature_extraction.feature_calculators.absolute_sum_of_changes(ts)
 * 译：各阶自相关系数的聚合统计特征
 * 返回时序数据的各阶差分值之间的聚合（方差、均值）统计特征
 
-$$R(l)=\frac{1}{(n-l)\sigma^2}\sum_{i=1}^{n-l}(x_i-\mu)(x_{i+l}-\mu)$$
+![](http://latex.codecogs.com/gif.latex?R(l)=\frac{1}{(n-l)\sigma^2}\sum_{i=1}^{n-l}(x_i-\mu)(x_{i+l}-\mu))
 * 参数：
   *  $x$   (pandas.Series)计算时序特征的数据对象
   * parma(list)   包含一个字典{“f_agg”: x, “maxlag”, n} 其中x为聚合函数名，n为最大差分阶数
@@ -120,7 +120,7 @@ ae=tsf.feature_extraction.feature_calculators.approximate_entropy(ts, 10, 0.1)
 * 译：自回归系数
 * 衡量时序数据的的周期性、不可预测性和波动性
 
-$$X_t=\psi_0+\sum_{i=1}^k \psi_i X_{t-i} + \varepsilon_t$$
+![](http://latex.codecogs.com/gif.latex?X_t=\psi_0+\sum_{i=1}^k\psi_{i}X_{t-i}+\varepsilon_t)
 * 参数：
   *  $x$   (pandas.Series)计算时序特征的数据对象
   * paramm (lsit) {“coeff”: x, “k”: y}其中“coeff”自回归中第X项系数，“k”为自回归阶数
@@ -211,7 +211,7 @@ ae=tsf.feature_extraction.feature_calculators.binned_entropy(ts, 10)
 * 译：时序数据非线性度量
 * 基于物理学的时序数据非线性度量（浮点数）
 
-$$\frac{1}{n-2lag}\sum_{i=0}^{n-2lag}x_{i+2lag}^2x_{i+lag}x_i$$
+![](http://latex.codecogs.com/gif.latex?\frac{1}{n-2lag}\sum_{i=0}^{n-2lag}x_{i+2lag}^2x_{i+lag}x_i)
 等同于计算
 $$\mathbb{E}[L^2(X)L(X)X]$$
 其中L为时滞算子。
@@ -330,7 +330,7 @@ ae=tsf.feature_extraction.feature_calculators.count_below_mean(ts)
 * 译：Ricker小波分析
 * 连续的小波分析，ricker子波是地震勘探中常用的子波类型，ricker子波是基于波动方程严格推导得到的。（pandas.Series）
 
-$$\frac{2}{\sqrt{3a}\pi^{\frac{1}{4}}}(1-\frac{x^2}{a^2})\exp(-\frac{x^2}{2a^2})$$
+![](http://latex.codecogs.com/gif.latex?\frac{2}{\sqrt{3a}\pi^{\frac{1}{4}}}(1-\frac{x^2}{a^2})\exp(-\frac{x^2}{2a^2}))
 其中，a是小波变换函数中的宽度参数。
 * 参数：
   *  $x$   (pandas.Series)计算时序特征的数据对象
@@ -405,7 +405,7 @@ print(list(ae))
 * 译：傅里叶变换系数
 * 基于快速傅里叶变换算法计算一维离散傅里叶序列的系数（pandas.Series）
 
-$$A_k=\sum_{m=0}^{n-1}a_m\exp{(-2\pi i\frac{mk}{n})}$$
+![](http://latex.codecogs.com/gif.latex?A_k=\sum_{m=0}^{n-1}a_m\exp{(-2\pi i\frac{mk}{n})})
 
 * 参数：
   *  $x$   (pandas.Series)计算时序特征的数据对象
@@ -476,7 +476,7 @@ ae=tsf.feature_extraction.feature_calculators.first_location_of_minimum(ts)
 * 译：Langevin模型拟合的多项式系数
 * 基于确定动力学模型Langevin拟合的多项式系数（pandas.Series）
 
-$$\dot{x}(t)=h(x(t))+\mathcal{N}(0,R)$$
+![](http://latex.codecogs.com/gif.latex?\dot{x}(t)=h(x(t))+\mathcal{N}(0,R))
 * 参数：
   *  $x$   (pandas.Series)计算时序特征的数据对象
   * param (list)  {“m”: x, “r”: y, “coeff”: z} x为正整数，是多项式拟合的最高阶数，y是正实数，用于计算均值的分位数，z为正整数，多项式的第几项。
@@ -622,7 +622,7 @@ ae=tsf.feature_extraction.feature_calculators.kurtosis(ts)
 * 译：标准差是否倍于极差
 * 标准差是否为数据范围的r倍（bool）
 
-$$std(x)>r*(max(x)-min(x))$$
+![](http://latex.codecogs.com/gif.latex?std(x)>r*(max(x)-min(x)))
 * 参数：
   *  $x$   (pandas.Series)计算时序特征的数据对象
   * r (float) – 比率值
