@@ -405,7 +405,7 @@ print(list(ae))
 * 译：傅里叶变换系数
 * 基于快速傅里叶变换算法计算一维离散傅里叶序列的系数（pandas.Series）
 
-![](http://latex.codecogs.com/gif.latex?A_k=\sum_{m=0}^{n-1}a_m\exp{(-2\pi\ i\frac{mk}{n})})
+![](http://latex.codecogs.com/gif.latex?A_k=\sum_{m=0}^{n-1}a_m\exp{(-2i\pi\frac{mk}{n})})
 
 * 参数：
   *  $x$   (pandas.Series)计算时序特征的数据对象
