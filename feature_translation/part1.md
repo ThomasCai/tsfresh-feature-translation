@@ -212,8 +212,8 @@ ae=tsf.feature_extraction.feature_calculators.binned_entropy(ts, 10)
 * 基于物理学的时序数据非线性度量（浮点数）
 
 ![](http://latex.codecogs.com/gif.latex?\frac{1}{n-2lag}\sum_{i=0}^{n-2lag}x_{i+2lag}^2x_{i+lag}x_i)
-等同于计算
-$$\mathbb{E}[L^2(X)L(X)X]$$
+
+等同于计算![](http://latex.codecogs.com/gif.latex?\mathbb{E}[L^2(X)L(X)X])
 其中L为时滞算子。
 * 参数：
   *  $x$   (pandas.Series)计算时序特征的数据对象
@@ -405,7 +405,7 @@ print(list(ae))
 * 译：傅里叶变换系数
 * 基于快速傅里叶变换算法计算一维离散傅里叶序列的系数（pandas.Series）
 
-![](http://latex.codecogs.com/gif.latex?A_k=\sum_{m=0}^{n-1}a_m\exp{(-2\pi i\frac{mk}{n})})
+![](http://latex.codecogs.com/gif.latex?A_k=\sum_{m=0}^{n-1}a_m\exp{(-2\pii\frac{mk}{n})})
 
 * 参数：
   *  $x$   (pandas.Series)计算时序特征的数据对象
