@@ -1,2 +1,77 @@
 # tsfresh-feature-translation
+
 [译]tsfresh特征提取工具可提取的特征
+
+> 原文来自官方文档：https://tsfresh.readthedocs.io/en/latest/api/tsfresh.feature_extraction.html
+
+## 特征目录
+
+- Part1
+
+- 一、tsfresh.feature_extraction.feature_calculators.abs_energy(x)
+- 二、tsfresh.feature_extraction.feature_calculators.absolute_sum_of_changes(x)
+- 三、tsfresh.feature_extraction.feature_calculators.agg_autocorrelation(x, param)
+- 四、tsfresh.feature_extraction.feature_calculators.agg_linear_trend(x, param)
+- 五、tsfresh.feature_extraction.feature_calculators.approximate_entropy(x, m, r)
+- 六、tsfresh.feature_extraction.feature_calculators.ar_coefficient(x, param)
+- 七、tsfresh.feature_extraction.feature_calculators.augmented_dickey_fuller(x, param)
+- 八、tsfresh.feature_extraction.feature_calculators.autocorrelation(x, lag)
+- 九、tsfresh.feature_extraction.feature_calculators.binned_entropy(x, max_bins)
+- 十、tsfresh.feature_extraction.feature_calculators.c3(x, lag)
+- 十一、tsfresh.feature_extraction.feature_calculators.change_quantiles(x, ql, qh, isabs, f_agg)
+- 十二、tsfresh.feature_extraction.feature_calculators.cid_ce(x, normalize)
+- 十三、tsfresh.feature_extraction.feature_calculators.count_above_mean(x)
+- 十四、tsfresh.feature_extraction.feature_calculators.count_below_mean(x)
+- 十五、tsfresh.feature_extraction.feature_calculators.cwt_coefficients(x, param)
+- 十六、tsfresh.feature_extraction.feature_calculators.energy_ratio_by_chunks(x, param)
+- 十七、tsfresh.feature_extraction.feature_calculators.fft_aggregated(x, param)
+- 十八、tsfresh.feature_extraction.feature_calculators.fft_coefficient(x, param)
+- 十九、tsfresh.feature_extraction.feature_calculators.first_location_of_maximum(x)
+- 二十、tsfresh.feature_extraction.feature_calculators.first_location_of_minimum(x)
+- 二十一、tsfresh.feature_extraction.feature_calculators.friedrich_coefficients(x, param)
+- 二十二、tsfresh.feature_extraction.feature_calculators.has_duplicate(x)
+- 二十三、tsfresh.feature_extraction.feature_calculators.has_duplicate_max(x)
+- 二十四、tsfresh.feature_extraction.feature_calculators.has_duplicate_min(x)
+- 二十五、tsfresh.feature_extraction.feature_calculators.index_mass_quantile(x, param)
+- 二十六、tsfresh.feature_extraction.feature_calculators.kurtosis(x)
+- 二十七、tsfresh.feature_extraction.feature_calculators.large_standard_deviation(x, r)
+- 二十八、tsfresh.feature_extraction.feature_calculators.last_location_of_maximum(x)
+- 二十九、tsfresh.feature_extraction.feature_calculators.last_location_of_minimum(x)
+- 三十、tsfresh.feature_extraction.feature_calculators.length(x)
+- 三十一、tsfresh.feature_extraction.feature_calculators.linear_trend(x, param)
+- 三十二、tsfresh.feature_extraction.feature_calculators.longest_strike_above_mean(x)
+- 三十三、tsfresh.feature_extraction.feature_calculators.longest_strike_below_mean(x)
+
+- Part2
+
+- 三十四、tsfresh.feature_extraction.feature_calculators.max_langevin_fixed_point(x, r, m)
+- 三十五、tsfresh.feature_extraction.feature_calculators.maximum(x)
+- 三十六、tsfresh.feature_extraction.feature_calculators.mean(x)
+- 三十七、tsfresh.feature_extraction.feature_calculators.mean_abs_change(x)
+- 三十八、tsfresh.feature_extraction.feature_calculators.mean_change(x)
+- 三十九、tsfresh.feature_extraction.feature_calculators.mean_second_derivative_central(x)
+- 四十、tsfresh.feature_extraction.feature_calculators.median(x)
+- 四十一、tsfresh.feature_extraction.feature_calculators.minimum(x)
+- 四十二、tsfresh.feature_extraction.feature_calculators.number_crossing_m(x, m)
+- 四十三、tsfresh.feature_extraction.feature_calculators.number_cwt_peaks(x, n)
+- 四十四、tsfresh.feature_extraction.feature_calculators.number_peaks(x, n)
+- 四十五、tsfresh.feature_extraction.feature_calculators.partial_autocorrelation(x, param)
+- 四十六、tsfresh.feature_extraction.feature_calculators.percentage_of_reoccurring_datapoints_to_all_datapoints(x)
+- 四十七、tsfresh.feature_extraction.feature_calculators.percentage_of_reoccurring_values_to_all_values(x)
+- 四十八、tsfresh.feature_extraction.feature_calculators.quantile(x, q)
+- 四十九、tsfresh.feature_extraction.feature_calculators.range_count(x, min, max)
+- 五十、tsfresh.feature_extraction.feature_calculators.ratio_beyond_r_sigma(x, r)
+- 五十一、tsfresh.feature_extraction.feature_calculators.ratio_value_number_to_time_series_length(x)
+- 五十二、tsfresh.feature_extraction.feature_calculators.sample_entropy(x)
+- 五十三、tsfresh.feature_extraction.feature_calculators.set_property(key, value)
+- 五十四、tsfresh.feature_extraction.feature_calculators.skewness(x)
+- 五十五、tsfresh.feature_extraction.feature_calculators.spkt_welch_density(x, param)
+- 五十六、tsfresh.feature_extraction.feature_calculators.standard_deviation(x)
+- 五十七、tsfresh.feature_extraction.feature_calculators.sum_of_reoccurring_data_points(x)
+- 五十八、tsfresh.feature_extraction.feature_calculators.sum_of_reoccurring_values(x)
+- 五十九、tsfresh.feature_extraction.feature_calculators.sum_values(x)
+- 六十、tsfresh.feature_extraction.feature_calculators.symmetry_looking(x, param)
+- 六十一、tsfresh.feature_extraction.feature_calculators.time_reversal_asymmetry_statistic
+- 六十二、tsfresh.feature_extraction.feature_calculators.value_count(x, value)
+- 六十三、tsfresh.feature_extraction.feature_calculators.variance(x)
+- 六十四、tsfresh.feature_extraction.feature_calculators.variance_larger_than_standard_deviation(x)
