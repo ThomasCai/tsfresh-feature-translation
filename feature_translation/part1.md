@@ -3,7 +3,7 @@
 * 译：绝对能量值
 * 返回时序数据的绝对能量（平方和）
 
-![](http://latex.codecogs.com/gif.latex?E=\sum_{i=1}^n x_i^2)
+![](http://latex.codecogs.com/gif.latex?E=\sum_{i=1}^nx_i^2)
 * 参数：$x$   (pandas.Series)计算时序特征的数据对象
 * 返回值：绝对能量值（浮点数）
 * 函数类型：简单
