@@ -287,7 +287,7 @@ ae=tsf.feature_extraction.feature_calculators.cid_ce(ts, True)
 * 统计高于时序数据均值的个数 （整数）
 
 * 参数：
-  *  $x$   (pandas.Series)计算时序特征的数据对象
+  *  $x$ (pandas.Series)计算时序特征的数据对象
 
 * 返回值：高于均值个数（整数）
 * 函数类型：简单
@@ -309,7 +309,7 @@ ae=tsf.feature_extraction.feature_calculators.count_above_mean(ts)
 * 统计低于时序数据均值的个数 （整数）
 
 * 参数：
-  *  $x$   (pandas.Series)计算时序特征的数据对象
+  *  $x$ (pandas.Series)计算时序特征的数据对象
 
 * 返回值：低于均值个数（整数）
 * 函数类型：简单
@@ -333,7 +333,7 @@ ae=tsf.feature_extraction.feature_calculators.count_below_mean(ts)
 ![](http://latex.codecogs.com/gif.latex?\frac{2}{\sqrt{3a}\pi^{\frac{1}{4}}}(1-\frac{x^2}{a^2})\exp(-\frac{x^2}{2a^2}))
 其中，a是小波变换函数中的宽度参数。
 * 参数：
-  *  $x$   (pandas.Series)计算时序特征的数据对象
+  *  $x$  (pandas.Series)计算时序特征的数据对象
   * param (list)  {“widths”:x, “coeff”: y, “w”: z} 中x为整数值构成的数组，y,z都是整数值。
 
 * 返回值：小波分析（pandas.Series）
@@ -515,7 +515,6 @@ import tsfresh as tsf
 import pandas as pd
 
 ts = pd.Series(x)  #数据x假设已经获取
-param = [{'m':3, 'r': 0.11, 'coeff': 2}]
 ae=tsf.feature_extraction.feature_calculators.has_duplicate(ts)
 ```
 * 注释：略
@@ -539,7 +538,6 @@ import tsfresh as tsf
 import pandas as pd
 
 ts = pd.Series(x)  #数据x假设已经获取
-param = [{'m':3, 'r': 0.11, 'coeff': 2}]
 ae=tsf.feature_extraction.feature_calculators.has_duplicate_max(ts)
 ```
 * 注释：略
@@ -563,7 +561,6 @@ import tsfresh as tsf
 import pandas as pd
 
 ts = pd.Series(x)  #数据x假设已经获取
-param = [{'m':3, 'r': 0.11, 'coeff': 2}]
 ae=tsf.feature_extraction.feature_calculators.has_duplicate_min(ts)
 ```
 * 注释：略
@@ -753,7 +750,6 @@ import tsfresh as tsf
 import pandas as pd
 
 ts = pd.Series(x)  #数据x假设已经获取
-param = [{'attr': 'pvalue'}]
 ae=tsf.feature_extraction.feature_calculators.longest_strike_above_mean(ts)
 ```
 * 注释：略
@@ -777,7 +773,6 @@ import tsfresh as tsf
 import pandas as pd
 
 ts = pd.Series(x)  #数据x假设已经获取
-param = [{'attr': 'pvalue'}]
 ae=tsf.feature_extraction.feature_calculators.longest_strike_below_mean(ts)
 ```
 * 注释：略
