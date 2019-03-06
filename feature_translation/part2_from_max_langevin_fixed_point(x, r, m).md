@@ -177,6 +177,7 @@ import pandas as pd
 ts = pd.Series(x)  #数据x假设已经获取
 ae = tsf.feature_extraction.feature_calculators.number_cwt_peaks(ts, n)
 ```
+---
 ## partial_autocorrelation(x, param)
 - 译：计算给定滞后处的部分自相关函数的值。时间序列{${x_t,t=1...T}$}的滞后k部分自相关等于$x_t$和$x_{t-k}$适应中间变量{$x_{t-1},...,x_{t-k+1}$}([1])的部分相关。根据[2]之后，它可以定义为：
 
