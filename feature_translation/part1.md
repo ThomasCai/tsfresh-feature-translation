@@ -123,7 +123,7 @@ ae=tsf.feature_extraction.feature_calculators.approximate_entropy(ts, 10, 0.1)
 ![](http://latex.codecogs.com/gif.latex?X_t=\psi_0+\sum_{i=1}^k\psi_{i}X_{t-i}+\varepsilon_t)
 * 参数：
   *  $x$   (pandas.Series)计算时序特征的数据对象
-  * paramm (lsit) {“coeff”: x, “k”: y}其中“coeff”自回归中第X项系数，“k”为自回归阶数
+  * param (list) {“coeff”: x, “k”: y}其中“coeff”自回归中第X项系数，“k”为自回归阶数
 * 返回值：自回归系数（pandas.Series）
 * 函数类型：组合
 * 代码示例：
@@ -146,7 +146,7 @@ ae=tsf.feature_extraction.feature_calculators.ar_coefficient(ts, param)
 
 * 参数：
   *  $x$   (pandas.Series)计算时序特征的数据对象
-  * paramm (lsit)  {“attr”: x} 其中x是字符串，包含“teststat”, “pvalue” 和“usedlag”
+  * param (list)   {“attr”: x} 其中x是字符串，包含“teststat”, “pvalue” 和“usedlag”
 * 返回值：ADF检验统计值（浮点数）
 * 函数类型：组合
 * 代码示例：
@@ -256,7 +256,7 @@ import numpy as np
 ts = pd.Series(x)  #数据x假设已经获取
 ae=tsf.feature_extraction.feature_calculators.change_quantiles(ts, 0.05, 0.95, False, 'mean')
 ```
-* 注释：时序数据区间内描述统计量
+* 注释：时序数据自定义分位数区间进行描述统计
 ——————————————————————————————————————————————————————————
 
 ## cid_ce(x, normalize) ##
@@ -472,7 +472,6 @@ ae=tsf.feature_extraction.feature_calculators.first_location_of_minimum(ts)
 ——————————————————————————————————————————————————————————
 
 ## friedrich_coefficients(x, param) ##
-<font face="黑体" color=red size=5>调用接口未成功</font>
 * 译：Langevin模型拟合的多项式系数
 * 基于确定动力学模型Langevin拟合的多项式系数（pandas.Series）
 
@@ -622,7 +621,7 @@ ae=tsf.feature_extraction.feature_calculators.kurtosis(ts)
 ![](http://latex.codecogs.com/gif.latex?std(x)>r*(max(x)-min(x)))
 * 参数：
   *  $x$   (pandas.Series)计算时序特征的数据对象
-  * r (float) – 比率值
+  * r (float) : 比率值
 * 返回值：标准差是否倍于极差（bool）
 * 函数类型：组合
 * 代码示例：
@@ -708,13 +707,12 @@ ae=tsf.feature_extraction.feature_calculators.length(ts)
 ——————————————————————————————————————————————————————————
 
 ## linear_trend(x, param) ##
-<font face="黑体" color=red size=5>调用接口未成功</font>
 * 译：线性回归分析
 * 基于最小二乘，自变量为索引（0-len(x)-1)的线性回归，认为数据是简单采样所得（pandas.Series）
 
 * 参数：
   *  $x$   (pandas.Series)计算时序特征的数据对象
-  * param (list) {“attr”: x} x为线性回归中的结果变量名，如'pvale'。
+  * param (list) {“attr”: x} x为线性回归中的结果变量名，如'pvalue'。
 
 * 返回值：线性回归分析（pandas.Series）
 * 函数类型：组合
@@ -732,9 +730,35 @@ ae=tsf.feature_extraction.feature_calculators.linear_trend(ts, param)
 * 注释：略
 ——————————————————————————————————————————————————————————
 
+## linear_trend_timewise(x, param) ##
+
+* 译：线性回归分析
+* 基于最小二乘，自变量为索引 [0, len(x)-1] 的线性回归，使用时间序列的索引进行线性回归，要求索引值的类型为datetime
+
+* 参数：
+  *  $x$   (pandas.Series)计算时序特征的数据对象
+  *  param (list) {“attr”: x} x为线性回归中的结果变量名，如"pvalue","rvalue","intercept","slope","stderr"。
+
+* 返回值：线性回归分析
+* 函数类型：组合
+* 代码示例：
+
+```python
+import tsfresh as tsf
+import pandas as pd
+
+ts = pd.Series(x)  #数据x假设已经获取
+param = [{'attr': 'pvalue'}]
+ae=tsf.feature_extraction.feature_calculators.linear_trend_timewise(ts, param)
+```
+
+* 注释：略
+
+
+
 ## longest_strike_above_mean(x) ##
 
-* 译：均值上的最长连续自列长度
+* 译：均值上的最长连续子列长度
 * 返回x中大于x平均值的最长连续子序列的长度（int）
 
 * 参数：
@@ -757,7 +781,7 @@ ae=tsf.feature_extraction.feature_calculators.longest_strike_above_mean(ts)
 
 ## longest_strike_below_mean(x) ##
 
-* 译：均值下的最长连续自列长度
+* 译：均值下的最长连续子列长度
 * 返回x中小于x平均值的最长连续子序列的长度（int）
 
 * 参数：

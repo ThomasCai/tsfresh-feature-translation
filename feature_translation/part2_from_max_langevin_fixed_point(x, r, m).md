@@ -286,8 +286,7 @@ ae = tsf.feature_extraction.feature_calculators.ratio_beyond_r_sigma(ts, r)
 ```
 ---
 ## ratio_value_number_to_time_series_length(x)
-- 译：如果时间序列中的所有值仅出现一次，则返回1，如果不是这样，则小于1。原则上，它只是返回：
-- 计算公式：单一的值 / 所有的值
+- 译：如果时间序列中的所有值仅出现一次，则返回1，如果不是这样，则小于1。原则上，它只是返回：单一的值 / 所有的值
 - 参数：$x$(pandas.Series)计算时序特征的数据对象
 - 返回：这个特征的值（float浮点数）
 - 函数类型：简单
@@ -490,7 +489,7 @@ ae = tsf.feature_extraction.feature_calculators.variance(ts)
 ```
 ---
 ## variance_larger_than_standard_deviation(x)
-- 译：布尔变量，表示x的方差是否大于其标准差。是表示x的方差大于1
+- 译：布尔变量，表示x的方差是否大于其标准差。True 表示x的方差大于1
 - 参数：$x$(pandas.Series)计算时序特征的数据对象
 - 返回：这个特征的值（bool布尔型）
 - 函数类型：简单
